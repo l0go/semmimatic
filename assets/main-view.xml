@@ -1,0 +1,27 @@
+<vbox styleName="main-view" width="100%" height="100%">
+	<vbox width="100%" height="100%" id="main-view">
+		<hbox styleName="top-bar" width="100%">
+			<box width="50%">
+				<label styleName="normal-text" text="semmimatic" />
+			</box>
+			<box width="50%">
+				<image 
+					width="32px"
+					height="32px" 
+					horizontalAlign="right"
+					styleName="hoverable"
+					onClick='js.Browser.location.href = "https://github.com/l0go/semmimatic"'
+					resource="static/github-mark-white.svg" />
+			</box>
+		</hbox>
+
+		<stack id="pages" width="100%" height="100%">
+			<homepage id="home" />
+			<loading id="loading" />
+		</stack>
+	</vbox> 
+
+	<hbox id="footer" width="100%" height="100px" style="background-color: #494d7e">
+		<label width="100%" textAlign="center" verticalAlign="center" styleName="small-text" text="powered by haxe-shit or somethign" />
+	</hbox>
+</vbox>

@@ -1,0 +1,82 @@
+
+.fade-in {
+	animation: animationFadeIn 2.5s linear 0s 1;
+}
+
+.fade-out {
+	animation: animationFadeIn 2.5s linear 0s 1 reverse;
+}
+
+#main-view {
+	padding-left: 48px;
+	padding-right: 48px;
+}
+
+.top-bar {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+#footer label {
+	text-size: 16px;
+}
+
+#right-box {
+	spacing: 28px;
+}
+
+#input {
+	border-radius: 10px;
+}
+
+#convert-btn {
+	color: white;
+	border: none;
+	border-radius: 10px;
+	background-color: #d9405b;
+}
+#convert-btn:hover {
+	background-color: #ca3b54;
+}
+#convert-btn:active {
+	background-color: #ba364d;
+}
+
+label {
+	font-name: "sans-serif";
+	color: white;
+}
+
+.normal-text {
+	font-size: 24px;
+}
+
+.small-text {
+	font-size: 16px;
+}
+
+.big-text {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+@media (min-width:768px) {
+	.big-text {
+		font-size: 48px;
+	}
+}
+
+@media (min-width:1024px) {
+	.big-text {
+		font-size: 64px; 
+	}
+}
+
+.hoverable {
+	pointer-events: true
+}
+
+.hoverable:hover {
+	cursor: pointer;
+}
+

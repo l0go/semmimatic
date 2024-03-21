@@ -1,0 +1,10 @@
+-cp src
+-main Main
+
+-cp vendor/haxeui-core
+-cp vendor/haxeui-html5
+-cp vendor/haxe-howler/src
+
+-D message.reporting=pretty
+
+-js project/semmi.js

@@ -1,0 +1,34 @@
+<dialog id="captcha" width="425" title="Verification is required" closable="false">
+	<style>
+		#captcha .dialog-title-label {
+			color: #666666;
+		}
+		#check-btn {
+			background-color: #4040ff;
+			color: white;
+			font-name: "sans-serif";
+		}
+		#check-btn:hover {
+			background-color: #1e1eff;
+		}
+		#check-btn:disabled {
+			background-color: #e4e4ff;
+		}
+	</style>
+	<vbox width="100%" style="background-color: #4040ff; padding: 27px;">
+		<label style="font-size: 14px;" text="Select all images with" />
+		<label style="font-size: 24px; font-weight: bold;" text="Haxe Discord Members" />
+	</vbox>
+	<grid id="captcha-images" columns="3" horizontalAlign="center">
+		<image id="george" resource="static/avatars/george.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="haxewoman" resource="static/avatars/haxewoman.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="haxebord" resource="static/avatars/haxeborg.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="zeta" resource="static/avatars/zeta.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="notbilly" resource="static/avatars/notbilly.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="ladyhaxe" resource="static/avatars/ladyhaxe.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="bulby" resource="static/avatars/bulby.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="vscode" resource="static/avatars/vscode.png" width="130px" height="130px" style="background-color: #313338;" />
+		<image id="dazkind" resource="static/avatars/dazkind.png" width="130px" height="130px" style="background-color: #313338;" />
+	</grid>
+	<button id="check-btn" disabled="true" horizontalAlign="right" text="Check" />
+</dialog>

@@ -1,0 +1,13 @@
+<module>
+	<resources>
+		<resource path="assets/" prefix="themes" />
+	</resources>
+	<components>
+		<component package="pages" />
+	</components>
+	<themes>
+		<semmi parent="default">
+			<style resource="themes/styles.css" />
+		</semmi>
+	</themes>
+</module>

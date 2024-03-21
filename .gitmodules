@@ -1,0 +1,9 @@
+[submodule "vendor/haxeui-core"]
+	path = vendor/haxeui-core
+	url = https://github.com/haxeui/haxeui-core
+[submodule "vendor/haxeui-html5"]
+	path = vendor/haxeui-html5
+	url = https://github.com/haxeui/haxeui-html5
+[submodule "vendor/haxe-howler"]
+	path = vendor/haxe-howler
+	url = https://github.com/adireddy/haxe-howler
