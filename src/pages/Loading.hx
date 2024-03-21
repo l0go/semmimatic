@@ -21,22 +21,31 @@ class Loading extends Box {
 		'mypaint M A G I C'
 	];
 
+	public var onDone: () -> Void;
+
 	public function run() {
+		var dialog = new pages.Captcha();
+
 		final loadingSong = new Howl({
 			src: ["static/loading.mp3"],
 			autoplay: false,
 			loop: true
 		});
+
+		loadingSong.on("end", () -> {
+			dialog.showDialog();
+			dialog.onComplete = () -> {
+				loadingSong.pause();
+				onDone();
+			};
+		});
+		
 		loadingSong.play();
 
 		nextCaption(0);
 	}
 
 	function nextCaption(i: Int = 0) {
-		if (i == 1) {//Std.int(captions.length * 1.5)) {
-			var dialog = new pages.Captcha();
-			dialog.showDialog();
-		}
 		changeCaption(captions[i % captions.length], i);
 	}
 

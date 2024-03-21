@@ -15,6 +15,7 @@ class Captcha extends Dialog {
 		"dazkind" => true,
 	];
 	var selectedImages: Map<String, Bool> = [];
+	public var onComplete: () -> Void;
 
 	public function new() {
 		super();
@@ -24,21 +25,27 @@ class Captcha extends Dialog {
 				correctImages.set(image.id, false);
 			}
 
+			image.borderColor = "blue";
 			image.onClick = (_) -> {
 				selectedImages.set(image.id, !selectedImages[image.id]);
 				image.borderSize = image.borderSize > 0 ? 0 : 1.5;
-				image.borderColor = "blue";
 				checkBtn.disabled = !anySelected();
 			};
 		}
 	}
 
 	@:bind(checkBtn, MouseEvent.CLICK)
-	public function onCheck(_) {
+	function onCheck(_) {
 		if (check()) {
-			trace("good jub!");
+			this.hide();
+			if (onComplete != null) onComplete();
 		} else {
 			this.shake();
+			checkBtn.disabled = true;
+			for (image in captchaImages.findComponents(haxe.ui.components.Image)) {
+				image.borderSize = 0;
+				selectedImages.set(image.id, false);
+			}
 		}
 	}
 

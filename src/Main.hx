@@ -9,8 +9,6 @@ class Main {
 		Toolkit.theme = 'semmi';
 		app.ready(() -> {
 			app.addComponent(new MainView());
-			var dialog = new pages.Captcha();
-			dialog.showDialog();
 			app.start();
 		});
 	}

@@ -13,6 +13,9 @@ class MainView extends VBox {
 		if (home.input.text?.trim().length > 0) {
 			pages.selectedId = "loading";
 			loading.run();
+			loading.onDone = () -> {
+				pages.selectedId = "error";
+			}
 		} else {
 			home.input.flash();
 		}
