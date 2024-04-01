@@ -5,7 +5,7 @@
 			<label styleName="big-text" text='READABLE "english"' />
 			<label styleName="big-text" text="translator 💓" />
 		</vbox>
-		<box styleName="avatars" width="50%" style="background-color: red;">
+		<box styleName="avatars" width="50%">
 			<image width="100%" horizontalAlign="center" verticalAlign="center" scaleMode="fitHeight" resource="static/avatars.png" />
 		</box>
 	</hbox>
