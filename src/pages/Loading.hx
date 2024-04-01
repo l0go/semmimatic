@@ -32,13 +32,15 @@ class Loading extends Box {
 			loop: true
 		});
 
-		loadingSong.on("end", () -> {
+		// uncomment if you want full loading for some reason lmao
+		//loadingSong.on("end", () -> {
+		haxe.Timer.delay(() -> {
 			dialog.showDialog();
 			dialog.onComplete = () -> {
 				loadingSong.pause();
 				onDone();
 			};
-		});
+		}, 25 * 1000);
 		
 		loadingSong.play();
 

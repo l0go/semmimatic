@@ -60,15 +60,26 @@ label {
 	font-weight: bold;
 }
 
+.big-text {
+	font-size: 36px;
+	font-weight: bold;
+}
+
 @media (min-width:768px) {
 	.big-text {
 		font-size: 48px;
 	}
 }
 
-@media (min-width:1024px) {
-	.big-text {
-		font-size: 64px; 
+@media (min-width:1080px) {
+	.avatars, .intro {
+		width: 50%;
+	}
+}
+
+@media (max-width:1080px) {
+	.home-page, .avatars, .intro {
+		width: 100%;
 	}
 }
 
@@ -79,4 +90,3 @@ label {
 .hoverable:hover {
 	cursor: pointer;
 }
-
